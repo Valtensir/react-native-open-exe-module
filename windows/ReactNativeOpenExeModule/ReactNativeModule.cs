@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Microsoft.ReactNative;
 using Microsoft.ReactNative.Managed;
@@ -14,6 +12,9 @@ namespace ReactNativeOpenExeModule
     internal sealed class ReactNativeModule
     {
         private ReactContext _reactContext;
+
+        [ReactConstant]
+        public string variable = "Olá Mundo em CS";
 
         [ReactInitializer]
         public void Initialize(ReactContext reactContext)
